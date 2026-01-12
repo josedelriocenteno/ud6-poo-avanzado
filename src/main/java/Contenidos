@@ -1,0 +1,49 @@
+Tema6_POO_Avanzado/
+│
+├── 1_Interfaces/
+│   ├── Explicacion_Interfaces.md            // Qué son, para qué sirven, diferencias con abstract
+│   ├── InterfazEjemplo.java                 // Interface con métodos abstractos
+│   ├── ClaseImplementaInterfaz.java         // Clase implementando interfaz
+│   └── UsoInterfaces.java                   // Uso polimórfico de interfaces
+│
+├── 2_Clases_Abstractas/
+│   ├── Explicacion_ClasesAbstractas.md      // Por qué existen, cómo funcionan
+│   ├── ClaseAbstracta.java                  // Métodos abstractos + normales
+│   ├── ClaseConcreta.java                   // Implementación completa
+│   └── UsoAbstractas.java                   // Cómo se usan en código real
+├── 3_Excepciones/
+│   ├── Explicacion_Excepciones.md           // try, catch, finally, throws, tipos de excepciones
+│   ├── ExcepcionPersonalizada.java          // Crear excepciones propias
+│   ├── ManejoExcepciones.java               // Validación + throw
+│   └── UsoExcepciones.java                  // Ejemplos prácticos
+│
+├── 4_Genericos/
+│   ├── Explicacion_Genericos.md             // Qué es <T> y por qué existe
+│   ├── ClaseGenerica.java                   // Clase con tipo genérico
+│   ├── UsoGenericos.java                    // Ejemplos con String, Integer, etc.
+│   └── ColeccionGenerica.java               // Uso realista de generics
+│
+├── 5_Colecciones_API_Java/                  // Antes de streams (tiene más sentido)
+│   ├── Explicacion_Colecciones.md           // List, Set, Map explicado fácil
+│   ├── EjemploList.java                     // ArrayList, LinkedList
+│   ├── EjemploSet.java                      // HashSet, TreeSet
+│   ├── EjemploMap.java                      // HashMap, TreeMap
+│   └── Iteradores.java                      // Iterator, ListIterator
+│
+├── 6_Streams_And_Lambdas/
+│   ├── Explicacion_Streams_Lambdas.md       // Qué es programación funcional
+│   ├── UsoStreams.java                      // map, filter, reduce
+│   ├── UsoLambdas.java                      // Lambda expressions
+│   └── OperacionesStreams.java              // Casos útiles
+│
+├── 7_SOLID/                                 // Nivel profesional
+│   ├── Explicacion_SOLID.md                 // Los 5 principios explicados fácil
+│   ├── S_ResponsabilidadUnica.java          // Ejemplo bien vs mal
+│   ├── O_AbiertoCerrado.java                // Extender sin modificar
+│   ├── L_SustitucionLiskov.java              // Herencia bien aplicada
+│   ├── I_SegregacionInterfaces.java         // Interfaces pequeñas y específicas
+│   └── D_InversionDependencias.java         // Inyección de dependencias
+│
+└── 8_Resumen_Y_Ejercicios/
+    ├── ResumenPOOAvanzado.md               // Resumen completo
+    └── EjerciciosPOOAvanzado.java           // Ejercicios avanzados nivel DAM
