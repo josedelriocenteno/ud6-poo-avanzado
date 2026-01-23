@@ -14,20 +14,24 @@ package ejemplos.empleado;
 public class Programador extends Empleado{
     
     // atributos
-    private double complemento;
-    private double horas;
-    private double precioHora;
+    protected double complemento;
+    protected double horas;
+    protected double precioHora;
     
     // constructores
     
     public Programador(){
         super();
         this.complemento = 100;
+        this.horas = 0;
+        this.precioHora = 0;
     }
 
     public Programador(int id, String nombre, String apellido, double complemento){
         super(id, nombre, apellido);
         this.complemento = complemento;
+        this.horas = 0;
+        this.precioHora = 0;
     }
         
     // getters y setters
@@ -64,8 +68,8 @@ public class Programador extends Empleado{
     }
     
     @Override
-    public double salario(){
-        return this.horas * this.precioHora;
+    public double calcularSalario(){
+        return super.calcularSalario() + complemento + (precioHora * horas);
     }
     
 }

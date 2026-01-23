@@ -19,13 +19,13 @@ public class Tecnico extends Empleado{
     public Tecnico(){
         super();
         this.especialidad = "";
-        this.plusPeligrosidad = 100;
+        this.plusPeligrosidad = 0;
     }
     
-    public Tecnico(int id, String nombre, String apellido, String especialidad, double plusPeligrosidad){
+    public Tecnico(int id, String nombre, String apellido, String especialidad){
         super(id, nombre, apellido);
         this.especialidad = especialidad;
-        this.plusPeligrosidad = plusPeligrosidad;
+        this.plusPeligrosidad = 0;
     }
         
     // getter y setter
@@ -37,15 +37,23 @@ public class Tecnico extends Empleado{
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
+
+    public double getPlusPeligrosidad() {
+        return plusPeligrosidad;
+    }
+
+    public void setPlusPeligrosidad(double plusPeligrosidad) {
+        this.plusPeligrosidad = plusPeligrosidad;
+    }
     
     // métodos
     @Override    
     public String toString() {
-        return super.toString() + "especialidad=" + this.especialidad;
+        return super.toString() + "especialidad=" + this.especialidad + ", plus de peligrosidad=" + this.plusPeligrosidad;
     }
     
     @Override
-    public double salario(){
-        return SMI + plusPeligrosidad;
+    public double calcularSalario(){
+        return super.calcularSalario() + this.plusPeligrosidad;
     }
 }

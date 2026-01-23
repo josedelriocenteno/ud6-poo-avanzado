@@ -4,6 +4,8 @@
  */
 package ejemplos.empleado;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author delcenjo
@@ -12,19 +14,31 @@ public class AppEmpleado {
     
     public static void main(String[] args) {
         Empleado empleado1 = new Empleado(1, "Luis", "Perez");
-        empleado1.setSalarioBase(1200);
         System.out.println(empleado1);
+        System.out.println("Salario mes:" + empleado1.calcularSalario());
+        try{
+            empleado1.setSalarioBase(1000);
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e.getMessage(), "App Empleados", JOptionPane.ERROR_MESSAGE);
+        }
+        System.out.println();
         
-        Empleado empleado2 = new Empleado();
-        System.out.println(empleado2);
-        
-        Programador programador1 = new Programador(3, "Macarena", "Cuenca", 500);
-        programador1.setHoras(25);
-        programador1.setPrecioHora(50);
-        System.out.println(programador1.toString());
-        
-        Tecnico tecnico1 = new Tecnico();
-        tecnico1.setEspecialidad("Redes 5.0");
-        System.out.println(tecnico1);
+        Junior junio1 = new Junior(3, "Macarena", "Cuenca", 500);
+        junio1.setHoras(25);
+        junio1.setPrecioHora(50);
+        System.out.println(junio1);
+        System.out.println("Salario mes:" + junio1.calcularSalario());
+        System.out.println();
+
+        Senior senior1 = new Senior(3, "Adriel", "Gomez", 500);
+        senior1.setHoras(25);
+        senior1.setPrecioHora(50);
+        try {
+            senior1.setDietas(500);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "App Empleados", JOptionPane.ERROR_MESSAGE);
+        }
+        System.out.println(senior1);
+        System.out.println("Salario mes:" + senior1.calcularSalario());
     }
 }

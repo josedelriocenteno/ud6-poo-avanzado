@@ -34,6 +34,7 @@ public class Empleado {
         this.idEmpleado = idEmpleado;
         this.nombre = nombre;
         this.apellidos = apellidos;
+        this.salarioBase = SMI;
     }
     
     // getter y setter
@@ -66,8 +67,9 @@ public class Empleado {
         return salarioBase;
     }
 
-    public void setSalarioBase(double salarioBase) {
-        this.salarioBase = salarioBase;
+    public void setSalarioBase(double salarioBase) throws Exception{
+        if(salarioBase>=SMI) this.salarioBase = salarioBase;
+        else throw new Exception("El salario base no puede ser inferior al SMI.");
     }
     
     // métodos
@@ -77,7 +79,7 @@ public class Empleado {
         return "Empleado (" + " tipo >> " + this.getClass().getSimpleName() +"):\n\t" + "idEmpleado=" + idEmpleado + ", nombre=" + nombre + ", apellidos=" + apellidos + ", salarioBase=" + salarioBase + ", ";
     }
     
-    public double salario(){
+    public double calcularSalario(){
         return this.salarioBase;
     }
     
