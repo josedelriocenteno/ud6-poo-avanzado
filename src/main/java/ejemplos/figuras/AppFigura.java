@@ -18,11 +18,29 @@ public class AppFigura {
         Cuadrado cd1 = new Cuadrado(p1, 40, 50);
         Rectangulo r1 = new Rectangulo(p1, 50, 100);
         
-        System.out.println("p1: " + p1);
-        System.out.println("c1: " + c1);
-        System.out.println("Área c1: " + c1.area());
-        System.out.println("Perímetro c1: " + c1.perimetro());
+        System.out.println("Círculo: " + c1);
+        System.out.println("Área Círculo: " + c1.area());
+        System.out.println("Perímetro Círculo: " + c1.perimetro());
         
+        System.out.println("");
         
+        System.out.println("Triángulo: " + t1);
+        System.out.println("Área Triángulo: " + t1.area());
+        System.out.println("Perímetro Triángulo: " + t1.perimetro());
+        
+        System.out.println("");
+        
+        System.out.println("Cuadrado: " + cd1);
+        System.out.println("Área Cuadrado: " + cd1.area());
+        System.out.println("Perímetro Cuadrado: " + cd1.perimetro());
+        System.out.println("Diagonas Cuadrado: " + cd1.diagonal());
+        
+        System.out.println("");
+        
+        System.out.println("Rectángulo: " + r1);
+        System.out.println("Área Rectángulo: " + r1.area());
+        System.out.println("Perímetro Rectángulo: " + r1.perimetro());
+        System.out.println("Diagonas Rectángulo: " + r1.diagonal());
+
     }
 }
