@@ -13,7 +13,7 @@ public class Figura {
     private Punto p1;
     
     public Figura(Punto p){
-        this.p1 = p;
+        this.p1 = new Punto(p.getX(), p.getY());
     }
     
     public double area(){
@@ -22,7 +22,12 @@ public class Figura {
     public double perimetro(){
         return 0;
     }
-
+    
+    public void moverPunto(double nuevaX, double nuevaY) {
+        p1.setX(nuevaX);
+        p1.setY(nuevaY);
+    }
+    
     @Override
     public String toString() {
         return "Figura (" + " tipo >> " + this.getClass().getSimpleName() +"):\n\t" + "x=" + p1.getX() + ", y=" + p1.getY();

@@ -41,6 +41,6 @@ public class AppFigura {
         System.out.println("Área Rectángulo: " + r1.area());
         System.out.println("Perímetro Rectángulo: " + r1.perimetro());
         System.out.println("Diagonas Rectángulo: " + r1.diagonal());
-
+        
     }
 }
