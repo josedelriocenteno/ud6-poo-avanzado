@@ -34,15 +34,7 @@ public class Triangulo extends Figura{
     public void setAltura(double altura) {
         this.altura = altura;
     }
-
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-    
+ 
     @Override
     public String toString(){
         return super.toString() + ", base=" + base + ", altura=" + altura;

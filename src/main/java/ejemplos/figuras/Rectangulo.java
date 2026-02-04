@@ -13,12 +13,4 @@ public class Rectangulo extends Cuadrilatero{
     public Rectangulo(Punto p, double base, double altura){
         super(p, base, altura);
     }
-
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
 }

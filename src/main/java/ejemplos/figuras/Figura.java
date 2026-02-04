@@ -10,12 +10,10 @@ package ejemplos.figuras;
  */
 public class Figura {
     
-    protected double x;
-    private double y;
+    private Punto p1;
     
     public Figura(Punto p){
-        this.x = p.getX();
-        this.y = p.getY();
+        this.p1 = p;
     }
     
     public double area(){
@@ -25,24 +23,8 @@ public class Figura {
         return 0;
     }
 
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
     @Override
     public String toString() {
-        return "Figura (" + " tipo >> " + this.getClass().getSimpleName() +"):\n\t" + "x=" + x + ", y=" + y;
+        return "Figura (" + " tipo >> " + this.getClass().getSimpleName() +"):\n\t" + "x=" + p1.getX() + ", y=" + p1.getY();
     }
 }

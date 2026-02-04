@@ -34,14 +34,6 @@ public class Cuadrilatero extends Figura{
     public void setAltura(double altura) {
         this.altura = altura;
     }
-
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
     
     public double diagonal(){
         return Math.sqrt(Math.pow(base, 2) + Math.pow(altura, 2));
