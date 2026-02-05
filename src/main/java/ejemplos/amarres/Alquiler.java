@@ -5,7 +5,7 @@
 package ejemplos.amarres;
 
 import java.time.LocalDate;
-import java.time.Period;
+import java.time.temporal.ChronoUnit;
 
 /**
  *
@@ -77,14 +77,13 @@ public class Alquiler {
         this.barco = barco;
     }
 
-    public double calcularPeriodo() throws FechaException{
-        Period diasDeOcupacion = Period.between(fechaInicial, fechaFinal);
-        double diasDeOcupacionDouble = (diasDeOcupacion.getYears() * 365.25) + (diasDeOcupacion.getMonths() * 30.44)
-                + diasDeOcupacion.getDays();
-        if (diasDeOcupacionDouble <= 0) throw new FechaException("La fecha final debe de ser posterior a la inicial");
-        else return diasDeOcupacionDouble;
-    }
-    
+    public double calcularPeriodo() throws FechaException {
+        if (fechaInicial.isAfter(fechaFinal)) {
+            throw new FechaException("La fecha final debe ser posterior a la inicial");
+        }
+        long dias = ChronoUnit.DAYS.between(fechaInicial, fechaFinal);
+        return (double) dias;
+}
     public double calcularAlquiler() {
         double diasDeOcupacionDouble = 0;
         try{
