@@ -22,7 +22,8 @@ public class Dni {
     }
 
     public void setDni(String dni) {
-        this.dni = dni;
+        if(validarDni(dni)) this.dni = dni;
+        else System.out.println("Dni inválido.");
     }
     
     public static boolean validarDni(String dni){
