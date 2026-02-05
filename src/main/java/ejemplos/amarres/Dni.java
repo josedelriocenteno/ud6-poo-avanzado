@@ -27,7 +27,6 @@ public class Dni {
     }
     
     public static boolean validarDni(String dni){
-        if (dni.matches("^[0-9]{8}[A-Z]$")) return true;
-        else return false;
+        return dni.matches("^[0-9]{8}[A-Z]$");
     }
 }
